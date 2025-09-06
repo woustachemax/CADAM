@@ -6,19 +6,25 @@
   </picture>
 </div>
 
-<h1 align="center">Text to CAD Web Application 🎯</h1>
+<h1 align="center"> ⛮ The Open Source Text to CAD Web App ⛮ </h1>
 
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/Adam-CAD/CADAM?style=social)](https://github.com/Adam-CAD/CADAM/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/Adam-CAD/CADAM?style=social)](https://github.com/Adam-CAD/CADAM/network)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-Backend-green.svg)](https://supabase.com/)
-[![OpenSCAD](https://img.shields.io/badge/OpenSCAD-WASM-yellow.svg)](https://openscad.org/)
+[![Stars](https://img.shields.io/github/stars/Adam-CAD/cadam?style=social&logo=github)](https://github.com/Adam-CAD/cadam/stargazers)
+[![Forks](https://img.shields.io/github/forks/Adam-CAD/CADAM?style=flat)](https://github.com/Adam-CAD/CADAM/network)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-19.1-61DAFB.svg?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3ECF8E.svg?style=flat&logo=supabase&logoColor=white)](https://supabase.com/)
+[![OpenSCAD](https://img.shields.io/badge/OpenSCAD-WASM-F9D64F.svg?style=flat)](https://openscad.org/)
+[![Website](https://img.shields.io/badge/website-adam.new-blue?style=flat)](https://adam.new)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.com/invite/HKdXDqAHCs)
+[![Follow Zach Dive](https://img.shields.io/badge/Follow-Zach%20Dive-1DA1F2?style=flat&logo=x&logoColor=white)](https://x.com/zachdive)
+[![Follow Aaron Li](https://img.shields.io/badge/Follow-Aaron%20Li-1DA1F2?style=flat&logo=x&logoColor=white)](https://x.com/aaronhetengli)
+[![Follow Dylan Anderson](https://img.shields.io/badge/Follow-tsadpbb-1DA1F2?style=flat&logo=x&logoColor=white)](https://x.com/tsadpbb)
 
-**🚀 Transform natural language into parametric 3D models instantly in your browser!**
+
+
 
 </div>
 
@@ -53,7 +59,7 @@
 ![Gear Example](./demo/gear-example.png)
 -->
 
-> 🎬 **Try it live:** [Coming Soon] <!-- Add your deployment URL here -->
+> 🎬 **Try it live:** https://adam.new/cadam
 
 ## 🚀 Quick Start
 
@@ -188,8 +194,8 @@ Components and attributions:
   
 **⭐ If you find CADAM useful, please consider giving it a star!**
 
-[![GitHub stars](https://img.shields.io/github/stars/Adam-CAD/CADAM?style=social)](https://github.com/Adam-CAD/CADAM/stargazers)
+[![Stars](https://img.shields.io/github/stars/Adam-CAD/cadam?style=social&logo=github)](https://github.com/Adam-CAD/cadam/stargazers)
 
-Made with ❤️ for the 3D printing and CAD community
+Made with 💙 for the 3D printing and CAD community
 
 </div>
