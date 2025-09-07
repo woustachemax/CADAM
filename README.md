@@ -61,6 +61,15 @@
 
 > 🎬 **Try it live:** https://adam.new/cadam
 
+## 📺 Screenshots
+
+<div align="left">
+  <div style="display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <img src="./public/screenshot-1.jpeg" alt="CADAM Screenshot 1" style="width: 100%; height: auto;"/>
+    <img src="./public/screenshot-2.jpeg" alt="CADAM Screenshot 2" style="width: 100%; height: auto;"/>
+  </div>
+</div>
+
 ## 🚀 Quick Start
 
 ```bash
