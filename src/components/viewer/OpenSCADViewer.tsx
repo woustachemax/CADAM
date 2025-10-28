@@ -44,6 +44,15 @@ export function OpenSCADViewer() {
     }
   }, [output, setBlob]);
 
+  useEffect(() => {
+    if (isError && error) {
+      console.log('OpenSCAD Error:', error);
+      if (error instanceof OpenSCADError) {
+        console.log('Error details:', error.stdErr);
+      }
+    }
+  }, [isError, error]);
+
   const fixError = useCallback(
     async (error: OpenSCADError) => {
       const newContent: Content = {

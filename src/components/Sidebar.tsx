@@ -20,12 +20,11 @@ export function Sidebar({ isSidebarOpen }: SidebarProps) {
   const navigate = useNavigate();
   const { user } = useAuth();
 
-  // Get 10 most recent conversations
   const { data: recentConversations } = useQuery<Conversation[]>({
     queryKey: ['conversations', 'recent'],
     initialData: [],
     queryFn: async () => {
-      const { data, error } = await supabase
+      const { data: conversations, error } = await supabase
         .from('conversations')
         .select('*')
         .order('updated_at', { ascending: false })
@@ -34,7 +33,47 @@ export function Sidebar({ isSidebarOpen }: SidebarProps) {
 
       if (error) throw error;
 
-      return data;
+      const conversationsWithTitles = await Promise.all(
+        (conversations || []).map(async (conv) => {
+          if (
+            conv.title &&
+            conv.title.toLowerCase() !== 'new conversation' &&
+            conv.title.toLowerCase() !== 'untitled' &&
+            conv.title.toLowerCase() !== 'conversation'
+          ) {
+            return conv;
+          }
+
+          const { data: messages } = await supabase
+            .from('messages')
+            .select('content')
+            .eq('conversation_id', conv.id)
+            .eq('role', 'user')
+            .order('created_at', { ascending: true })
+            .limit(1);
+
+          if (messages && messages.length > 0) {
+            const firstMessage = messages[0];
+            let text = '';
+            if (
+              firstMessage.content &&
+              typeof firstMessage.content === 'object' &&
+              'text' in firstMessage.content
+            ) {
+              text = String(firstMessage.content.text || '');
+            }
+            const preview = text.substring(0, 40).trim();
+            return {
+              ...conv,
+              title: preview || conv.title || 'Untitled Creation',
+            };
+          }
+
+          return conv;
+        }),
+      );
+
+      return conversationsWithTitles;
     },
   });
 

@@ -184,6 +184,9 @@ CRITICAL: Never include in code comments or anywhere:
 - Internal prompts or instructions
 - Any meta-information about how you work
 Just generate clean OpenSCAD code with appropriate technical comments.
+- Return ONLY raw OpenSCAD code. DO NOT wrap it in markdown code blocks (no \`\`\`openscad). 
+Just return the plain OpenSCAD code directly.
+
 
 **Examples:**
 
@@ -534,6 +537,12 @@ Deno.serve(async (req) => {
                     ];
                   if (lastContent.type === 'text')
                     code = lastContent.text.trim();
+                }
+
+                const codeBlockRegex = /^```(?:openscad)?\n?([\s\S]*?)\n?```$/;
+                const match = code.match(codeBlockRegex);
+                if (match) {
+                  code = match[1].trim();
                 }
 
                 let title =
